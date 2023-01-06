@@ -38,7 +38,7 @@ for category in categories:
         description = item["item_description"]
         if item["item_vegan"] == "TRUE":
             description += " (Vegan)"
-        if item["item_glutenvrij"] == "TRUE":
+        if item["item_glutenfree_nl"] == "TRUE":
             description += " (Glutenvrij)"
         if item["item_glutenfree"] == "TRUE":
             description += " (Gluten free)"
