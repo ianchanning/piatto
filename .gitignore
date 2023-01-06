@@ -2,3 +2,6 @@
 *.csv
 *.html
 *.xls*
+*.pdf
+Session.vim
+
