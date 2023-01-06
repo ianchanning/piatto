@@ -11,12 +11,16 @@
 }
 
 .menu-section-title {
-  font-family: georgia;
+  font-family: Catalina_Typewriter_Light, georgia;
   font-size: 50px;
   display: block;
   font-weight:normal;
   margin: 20px 0;
   text-align: Center;
+}
+
+h1.menu-section-title {
+  font-size: 150px;
 }
 
 .menu-item {
@@ -25,12 +29,13 @@
 }
 
 .menu-item-name{
-  font-family: helvetica;
+  font-family: Catalina_Typewriter_Light, helvetica;
   font-weight: bold;
   border-bottom: 2px dotted rgb(213, 213, 213);
 }
 
 .menu-item-description {
+  font-family: Catalina_Typewriter_Light, helvetica;
   font-style: italic;
   font-size: .9em;
   line-height: 1.5em;
@@ -39,6 +44,48 @@
 .menu-item-price{
   float: right;
   font-weight: bold;
-  font-family: arial;
-  margin-top: -22px;
+  font-family: Catalina_Typewriter_Light, arial;
+  margin-top: -56px;
+}
+
+@media print {
+  .menu-section {
+    break-after: always;
+    /* for firefox */
+    page-break-after: always;
+    /* for webkit */
+    -webkit-column-break-after: always;
+  }
+}
+
+/*!
+ * Web Fonts from Fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at https://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2022 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Kimmy Design
+ * License URL: https://www.fontspring.com/licenses/kimmy-design/webfont
+ *
+ *
+ */
+@font-face {
+    font-family: 'Catalina_Typewriter_Light';
+    src: url('./fonts/Catalina_Typewriter_Light-webfont.woff2') format('woff2'),
+         url('./fonts/Catalina_Typewriter_Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
