@@ -26,22 +26,25 @@ for category in categories:
     list[category] = categoryItems
 
 
-html = "<style>" + css + "</style>"
+html = "<body>"
+html += "<style>" + css + "</style>"
 html += "<div class=\"menu-body\">"
+html += "<h1 class=\"menu-section-title\">Ogato</h1>"
 
-for category in categories:
+for index, category in enumerate(categories):
     items = list[category]
+    sectionClass = 'menu-section-wide' if (index + 1) % 3 == 0 else 'menu-section'
+    html += "<div class=\"" + sectionClass + "\"><h2 class=\"menu-section-title\">" + category + "</h2>"
 
-    html+= "<div class=\"menu-section\"><h2 class=\"menu-section-title\">" + category + "</h2>"
 
     for item in items:
         description = item["item_description"]
         if item["item_vegetarian"] == "TRUE":
-            description += " (" + item["item_vegetarian_description"] + ")"
+            description += " &bull; " + item["item_vegetarian_description"]
         if item["item_vegan"] == "TRUE":
-            description += " (" + item["item_vegan_description"] + ")"
+            description += " &bull; " + item["item_vegan_description"]
         if item["item_glutenfree"] == "TRUE":
-            description += " (" + item["item_glutenfree_description"] + ")"
+            description += " &bull; " + item["item_glutenfree_description"]
 
 
         html += "<div class=\"menu-item\">"
@@ -56,6 +59,7 @@ for category in categories:
     html += "</div>"
 
 html += "</div>"
+html += "</body>"
 
 soup = BeautifulSoup(html, "html.parser")
 
