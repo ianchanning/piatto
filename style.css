@@ -1,31 +1,56 @@
 .menu-body {
   max-width: 680px;
   margin: 0 auto;
-  padding: 10;
-  display: block;
+  padding: 0px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
   color: rgb(92, 92, 92);
 }
 
 .menu-section {
-  margin-bottom: 80px;
+  margin: 40px 2% 20px 2%;
+  width: 46%;
 }
 
 .menu-section-title {
   font-family: Catalina_Typewriter_Light, georgia;
-  font-size: 50px;
+  font-size: 14px;
   display: block;
-  font-weight:normal;
-  margin: 20px 0;
-  text-align: Center;
+  font-weight: normal;
+  margin: -10px 0 -10px 0;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.menu-section-wide {
+  margin: 20px 2% 20px 2%;
+  background-color: #eee;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-section-wide > .menu-item {
+  margin: 0 2%;
+  width: 46%;
 }
 
 h1.menu-section-title {
-  font-size: 150px;
+  font-size: 60px;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-top: -80px;
+  margin-bottom: 10px;
 }
 
 .menu-item {
-  margin: 35px 0;
-  font-size: 18px;
+  margin: -5px 0px;
+  font-size: 16px;
 }
 
 .menu-item-name{
@@ -37,7 +62,7 @@ h1.menu-section-title {
 .menu-item-description {
   font-family: Catalina_Typewriter_Light, helvetica;
   font-style: italic;
-  font-size: .9em;
+  font-size: .7em;
   line-height: 1.5em;
 }
 
@@ -45,18 +70,18 @@ h1.menu-section-title {
   float: right;
   font-weight: bold;
   font-family: Catalina_Typewriter_Light, arial;
-  margin-top: -56px;
+  margin-top: -49px;
 }
 
+/*
 @media print {
-  .menu-section {
+  .menu-section-wide {
     break-after: always;
-    /* for firefox */
     page-break-after: always;
-    /* for webkit */
     -webkit-column-break-after: always;
   }
 }
+*/
 
 /*!
  * Web Fonts from Fontspring.com
